@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Learn Notes</title>
+  </head>
+
+  <body>
+
+    <div class="container" style="font-size: 108pt;">
+      Play: <span id="play-note"></span>
+    </div>
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+
+      var notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
+      function changeNote() {
+         var noteIndex = Math.floor(Math.random() * notes.length);
+         $("#play-note").html(notes[noteIndex]);
+
+          var t = setTimeout("changeNote()", 1000);
+      }
+
+      changeNote();
+    </script>
+  </body>
+</html>
